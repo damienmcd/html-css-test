@@ -1,0 +1,49 @@
+/* BROWSER RESETS */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+/* END BROWSER RESETS */
+
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100vw;
+  height: 1px; /* Fix for IE11 not applying the min-height correctly. */
+  min-height: 100vh;
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 100%;
+}
+
+.col--a {
+  background-color: #ffc5c5;
+}
+
+.col--b {
+  background-color: #c5ffc5;
+}
+
+.col--c {
+  background-color: #c5c5ff;
+}
+
+
+@media (min-width: 700px) {
+  .col--2 {
+    flex-basis: 50%;
+  }
+}
